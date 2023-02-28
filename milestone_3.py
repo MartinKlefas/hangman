@@ -3,14 +3,14 @@ import random
 
 def check_guess(thisGuess):
     thisGuess = thisGuess.lower()
-    if thisGuess in word.lower:
-        print("Good guess! %s is in the word.", thisGuess)
+    if thisGuess in word.lower():
+        print("Good guess! %s is in the word." % thisGuess)
     else:
-        print("Sorry, %s is not in the wordT Try again.", thisGuess)
+        print("Sorry, %s is not in the wordT Try again." % thisGuess)
 
 def ask_for_input():
     while True:
-        guess = input("Please guess a single letter")
+        guess = input("Please guess a single letter: ")
 
         try:
             if len(guess) == 1 and guess.isalpha():  
