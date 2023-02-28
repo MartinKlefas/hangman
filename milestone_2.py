@@ -9,7 +9,7 @@ print(word)
 guess = input("Please guess a single letter")
 
 try:
-    if len(guess) == 1 and re.search([a-zA-Z],guess) :
+    if len(guess) == 1 and guess.isalpha():  #re.search([a-zA-Z],guess) :
         print("Good Guess")
     else:
         print("Oops! that is not a valid input")
