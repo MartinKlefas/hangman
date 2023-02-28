@@ -1,5 +1,5 @@
 import random
-import re
+
 
 def check_guess(thisGuess):
     thisGuess = thisGuess.lower()
@@ -13,7 +13,7 @@ def ask_for_input():
         guess = input("Please guess a single letter")
 
         try:
-            if len(guess) == 1 and guess.isalpha():  #re.search([a-zA-Z],guess) :
+            if len(guess) == 1 and guess.isalpha():  
                 break
             else:
                 print("Invalid letter. Please, enter a single alphabetical character.")
