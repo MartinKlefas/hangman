@@ -37,12 +37,13 @@ class Hangman:
                     print("You aleady tried that letter!")
                 else:
                     self.check_guess(guess)
+                    break
                 
-                self.list_of_guesses.add
+                self.list_of_guesses.append(guess)
                 
             except:
-                print("Invalid letter. Please, enter a single alphabetical character.")
+                print("Exception. Please, enter a single alphabetical character.")
     
 Fruits = ["Apple","Banana","Pear","Orange","Plum"]
 new_game = Hangman(Fruits)
-new_game.check_guess("A")
+new_game.ask_for_input()
