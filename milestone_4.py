@@ -27,7 +27,8 @@ class Hangman:
             print("Sorry, %s is not in the wordT Try again." % thisGuess)
 
     def ask_for_input(self):
-        while True:
+        invalid_input = True
+        while invalid_input:
             guess = input("Please guess a single letter: ")
 
             try:
@@ -37,13 +38,15 @@ class Hangman:
                     print("You already tried that letter!")
                 else:
                     self.check_guess(guess)
-                    break
+                    invalid_input = False
                 
                 self.list_of_guesses.append(guess)
+                
                 
             except:
                 print("Exception. Please, enter a single alphabetical character.")
     
 Fruits = ["Apple","Banana","Pear","Orange","Plum"]
 new_game = Hangman(Fruits)
+new_game.ask_for_input()
 new_game.ask_for_input()
