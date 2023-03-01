@@ -13,6 +13,6 @@ The script then simply checks if the guess is a single character and is in the a
 # Milestone 3
 Moved the code into two functions:
 1) check_guess - Checks if the guessed letter is in the hidden word
-- this accepts the guess as a string variable and prints the success/fail message to the stdout.
+    - this accepts the guess as a string variable and prints the success/fail message to the stdout.
 2) ask_for_input - accepts input from the user, validates that it's a single letter of the alphabet and then calls check_guess to see if it's in the hidden word.
 

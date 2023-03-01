@@ -15,14 +15,15 @@ class Hangman:
 
          self.word_guesses = underscore_list
 
-    def check_guess(thisGuess):
+    #methods
+    def check_guess(self,thisGuess):
         thisGuess = thisGuess.lower()
-        if thisGuess in word.lower():
+        if thisGuess in self.word.lower():
             print("Good guess! %s is in the word." % thisGuess)
         else:
             print("Sorry, %s is not in the wordT Try again." % thisGuess)
 
-    def ask_for_input():
+    def ask_for_input(self):
         while True:
             guess = input("Please guess a single letter: ")
 
@@ -32,11 +33,11 @@ class Hangman:
                 elif guess in self.list_of_guesses:
                     print("You aleady tried that letter!")
                 else:
-                    check_guess(guess)
+                    self.check_guess(guess)
                 
-                list_of_guesses.add
+                self.list_of_guesses.add
                 
             except:
                 print("Invalid letter. Please, enter a single alphabetical character.")
     
-    check_guess(guess)
+
