@@ -23,6 +23,16 @@ class Hangman:
         thisGuess = thisGuess.lower()
         if thisGuess in self.word.lower():
             print("Good guess! %s is in the word." % thisGuess)
+            underscore_list = list()
+
+            for letter in self.word:
+                if letter.lower() == thisGuess:
+                    underscore_list.append(letter)
+                else:
+                    underscore_list.append("_")
+            
+            self.word_guessed = underscore_list
+            self.num_letters = self.num_letters - 1
         else:
             print("Sorry, %s is not in the wordT Try again." % thisGuess)
 
@@ -45,6 +55,8 @@ class Hangman:
                 
             except:
                 print("Exception. Please, enter a single alphabetical character.")
+
+    
     
 Fruits = ["Apple","Banana","Pear","Orange","Plum"]
 new_game = Hangman(Fruits)
