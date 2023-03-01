@@ -26,3 +26,9 @@ Updated the functions from milestone 3 to include:
 Added a basic test implementation of the class:
 - create a short list of fruits
 - manually added two letter guesses calls to test repeated input
+
+#todo
+proper tests
+display game progress to user
+implement player death
+implement player success
