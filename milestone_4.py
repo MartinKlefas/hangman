@@ -40,4 +40,6 @@ class Hangman:
             except:
                 print("Invalid letter. Please, enter a single alphabetical character.")
     
-
+Fruits = ["Apple","Banana","Pear","Orange","Plum"]
+new_game = Hangman(Fruits)
+new_game.check_guess("A")
