@@ -1,12 +1,12 @@
 import random
 
 
-def check_guess(thisGuess):
-    thisGuess = thisGuess.lower()
-    if thisGuess in word.lower():
-        print("Good guess! %s is in the word." % thisGuess)
+def check_guess(guess):
+    guess = guess.lower()
+    if guess in word.lower():
+        print("Good guess! %s is in the word." % guess)
     else:
-        print("Sorry, %s is not in the wordT Try again." % thisGuess)
+        print("Sorry, %s is not in the wordT Try again." % guess)
 
 def ask_for_input():
     while True:
