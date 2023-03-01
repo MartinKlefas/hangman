@@ -32,9 +32,12 @@ class Hangman:
                     underscore_list.append("_")
             
             self.word_guessed = underscore_list
-            self.num_letters = self.num_letters - 1
+            self.num_letters -= 1
         else:
             print("Sorry, %s is not in the wordT Try again." % thisGuess)
+            self.num_lives -= 1
+            print("You have %s lives left." % self.num_lives)
+
 
     def ask_for_input(self):
         invalid_input = True
