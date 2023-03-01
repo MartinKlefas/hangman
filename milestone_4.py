@@ -13,7 +13,7 @@ class Hangman:
          for letter in self.word:
             underscore_list.append("_")
 
-         self.word_guesses = underscore_list
+         self.word_guessed = underscore_list
 
     #methods
     def check_guess(self,thisGuess):
