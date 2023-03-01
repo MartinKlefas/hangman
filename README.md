@@ -27,8 +27,13 @@ Added a basic test implementation of the class:
 - create a short list of fruits
 - manually added two letter guesses calls to test repeated input
 
+# Milestone 5
+created a function to oversee the game process
+called function to run a game start-finish
+
 #todo
-proper tests
-display game progress to user
-implement player death
-implement player success
+- display game progress to user
+- proper tests
+- pull in larger word list from somewhere
+- properly implement number of lives setting code
+- draw the little hangman dude?
