@@ -11,8 +11,18 @@ Using the created repository create the variables for the game. Have the game ra
 The script then simply checks if the guess is a single character and is in the alphabet (non-numeric etc)
 
 # Milestone 3
-Moved the code into two functions:
+Moved the code from milestone 2 into two functions:
 1) check_guess - Checks if the guessed letter is in the hidden word
     - this accepts the guess as a string variable and prints the success/fail message to the stdout.
 2) ask_for_input - accepts input from the user, validates that it's a single letter of the alphabet and then calls check_guess to see if it's in the hidden word.
 
+# Milestone 4
+Updated the functions from milestone 3 to include:
+    - warn about repeated letter guesses
+    - update the revealed portions of the word and the number of letters the user still needs to find
+    - track player lives
+    - changed the wording of the printed messages to reflect these changes
+
+Added a basic test implementation of the class:
+    - create a short list of fruits
+    - manually added two letter guesses calls to test repeated input
