@@ -18,11 +18,11 @@ Moved the code from milestone 2 into two functions:
 
 # Milestone 4
 Updated the functions from milestone 3 to include:
-    - warn about repeated letter guesses
-    - update the revealed portions of the word and the number of letters the user still needs to find
-    - track player lives
-    - changed the wording of the printed messages to reflect these changes
+- warn about repeated letter guesses
+- update the revealed portions of the word and the number of letters the user still needs to find
+- track player lives
+- changed the wording of the printed messages to reflect these changes
 
 Added a basic test implementation of the class:
-    - create a short list of fruits
-    - manually added two letter guesses calls to test repeated input
+- create a short list of fruits
+- manually added two letter guesses calls to test repeated input
