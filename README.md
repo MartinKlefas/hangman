@@ -31,9 +31,16 @@ Added a basic test implementation of the class:
 created a function to oversee the game process
 called function to run a game start-finish
 
-#todo
-- display game progress to user
+# todo
+- display game progress to user.
+    - at present it only shows
+        - if the user has guessed correctly or not
+        - how many lives left or if dead
 - proper tests
+    - unit tests or similar to test edge cases
 - pull in larger word list from somewhere
+    - presently uses hard-coded list of 5 fruits
 - properly implement number of lives setting code
+    - at the moment the number of lives you start with is set to 5
 - draw the little hangman dude?
+    - it's not hangman without the dude being hung when you get it wrong!
