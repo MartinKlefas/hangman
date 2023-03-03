@@ -1,13 +1,15 @@
 import http.client
+import rapidAPICredentials
+
 
 conn = http.client.HTTPSConnection("wordsapiv1.p.rapidapi.com")
 
 headers = {
-    'X-RapidAPI-Key': "ad5b420f13msh656a9fd969677dfp1567a7jsn1fb476f1cada",
-    'X-RapidAPI-Host': "wordsapiv1.p.rapidapi.com"
+    'X-RapidAPI-Key': rapidAPICredentials.key,
+    'X-RapidAPI-Host': rapidAPICredentials.host
     }
 
-conn.request("GET", "/words/?letterPattern=%5E%5Ba-zA-Z%5D%2B&limit=100&page=1&hasDetails=hasDetails", headers=headers)
+conn.request("GET", "/words/?letterPattern=%5E%5Ba-zA-Z%5D%2B&lettersmin=4&letters=8&limit=10&page=1&frequencymin=5", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
