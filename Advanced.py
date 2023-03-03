@@ -5,19 +5,17 @@ class Hangman:
     def __init__(self, word_list, num_lives = 5) -> None:
          self.word_list = word_list
          self.num_lives = num_lives
-         self.word = random.choice(word_list)
+         self.word = " "
+         while " " not in self.word:
+            self.word = random.choice(word_list)
 
+         print("The secret word is %s letters long" % len(self.word))
 
 
          self.num_letters = len(set(self.word))
          self.list_of_guesses = list()
 
-         underscore_list = list()
-
-         for letter in self.word:
-            underscore_list.append("_")
-
-         self.word_guessed = underscore_list
+         self.word_guessed = ["_"]* len(self.word)
 
     #methods
     def check_guess(self,thisGuess):
@@ -33,7 +31,7 @@ class Hangman:
                 counter +=1
             
             self.num_letters -= 1
-            print(self.word_guessed)
+            print(" ".join(self.word_guessed))
         else:
             print("Sorry, %s is not in the word." % thisGuess)
             self.num_lives -= 1
@@ -68,7 +66,7 @@ def play_game(word_list: list):
 
     while True:
         if game.num_lives == 0:
-            print("You lost!")
+            print("You lost! The word was", game.word)
             break
         elif game.num_letters > 0:
             game.ask_for_input()
