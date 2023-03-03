@@ -1,17 +1,25 @@
-import http.client
 import rapidAPICredentials
+import random
 
 
-conn = http.client.HTTPSConnection("wordsapiv1.p.rapidapi.com")
+import requests
 
-headers = {
-    'X-RapidAPI-Key': rapidAPICredentials.key,
-    'X-RapidAPI-Host': rapidAPICredentials.host
-    }
+def get_words_list():
+    try:
+        url = "https://wordsapiv1.p.rapidapi.com/words/"
 
-conn.request("GET", "/words/?letterPattern=%5E%5Ba-zA-Z%5D%2B&lettersmin=4&letters=8&limit=10&page=1&frequencymin=5", headers=headers)
+        querystring = {"letterPattern":"^[a-zA-Z]+","limit":"10","page":random.randint(1,3376),"frequencymin":"4"}
 
-res = conn.getresponse()
-data = res.read()
+        headers = {
+            'X-RapidAPI-Key': rapidAPICredentials.key,
+            'X-RapidAPI-Host': rapidAPICredentials.host
+            }
 
-print(data.decode("utf-8"))
+        response = requests.request("GET", url, headers=headers, params=querystring)
+
+        jsonResponse = response.json()
+        results = jsonResponse['results']['data']
+
+        return results
+    except:
+        return ["Apple","Banana","Pear","Orange","Plum"]
