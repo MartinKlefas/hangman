@@ -1,4 +1,5 @@
 import random
+import words # this is user generated code to get a List() of words from an API provider. It's not in github, and left as an exercise for the user.
 
 class Hangman:
     def __init__(self, word_list, num_lives = 5) -> None:
@@ -81,5 +82,8 @@ def play_game(word_list: list):
     
     
 Fruits = ["Apple","Banana","Pear","Orange","Plum"]
-game = play_game(Fruits)
+new_words_list = words.get_words()
+print(new_words_list)
+
+#game = play_game(Fruits)
 
