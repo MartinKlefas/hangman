@@ -23,16 +23,16 @@ class Hangman:
         thisGuess = thisGuess.lower()
         if thisGuess in self.word.lower():
             print("Good guess! %s is in the word." % thisGuess)
-            underscore_list = list()
-
+            
+            counter = 0
             for letter in self.word:
                 if letter.lower() == thisGuess:
-                    underscore_list.append(letter)
-                else:
-                    underscore_list.append("_")
+                    self.word_guessed[counter] = thisGuess
+                
+                counter +=1
             
-            self.word_guessed = underscore_list
             self.num_letters -= 1
+            print(self.word_guessed)
         else:
             print("Sorry, %s is not in the word." % thisGuess)
             self.num_lives -= 1
