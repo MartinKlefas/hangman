@@ -1,12 +1,12 @@
 import random
-import words_api # this is user generated code to get a List() of words from an API provider. It's not in github, and left as an exercise for the user.
+import words_api 
 
 class Hangman:
     def __init__(self, word_list, num_lives = 5) -> None:
          self.word_list = word_list
          self.num_lives = num_lives
          self.word = " "
-         while " " not in self.word:
+         while " " in self.word:
             self.word = random.choice(word_list)
 
          print("The secret word is %s letters long" % len(self.word))

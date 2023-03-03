@@ -1,4 +1,4 @@
-import rapidAPICredentials
+import rapidAPICredentials # you need to get an api key for yourself and put it in this file.
 import random
 
 
