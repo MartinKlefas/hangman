@@ -4,7 +4,7 @@ def get_words():
         conn = http.client.HTTPSConnection("wordsapiv1.p.rapidapi.com")
 
         headers = {
-            'X-RapidAPI-Key': "8cf0eb0ea3msh3bb1762b245e7b6p148f6cjsn74972c17d84b",
+            'X-RapidAPI-Key': "key",
             'X-RapidAPI-Host': "wordsapiv1.p.rapidapi.com"
             }
 
